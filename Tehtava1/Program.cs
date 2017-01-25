@@ -22,14 +22,14 @@ namespace JAMK.IT
             cd.Artist = "ZZ Top";
             cd.Album = "Afterburner";
 
-            CD S1 = new CD("Sleeping Bag  4:02");
-            CD S2 = new CD("Stages  3:32");
-            CD S3 = new CD("Woke Up With Wood  3:45");
-            CD S4 = new CD("Rough Boy  4:50");
-            CD S5 = new CD("Can't Stop Rockin'  3:01");
-            CD S6 = new CD("Planet Of Women  4:04");
-            CD S7 = new CD("I Got The Message  3:27");
-            CD S8 = new CD("Velcro Fly  3:29");
+            CD S1 = new CD("Sleeping Bag                        4:02");
+            CD S2 = new CD("Stages                              3:32");
+            CD S3 = new CD("Woke Up With Wood                   3:45");
+            CD S4 = new CD("Rough Boy                           4:50");
+            CD S5 = new CD("Can't Stop Rockin'                  3:01");
+            CD S6 = new CD("Planet Of Women                     4:04");
+            CD S7 = new CD("I Got The Message                   3:27");
+            CD S8 = new CD("Velcro Fly                          3:29");
             CD S9 = new CD("Dipping Low (In The Lap Of Luxury)  3:11");
             CD S10 = new CD("Delirious  3:41");
 
@@ -50,9 +50,9 @@ namespace JAMK.IT
             Console.WriteLine("-Name: {0}", cd.Album);
             Console.WriteLine("Songs:");
 
-            foreach (CD kakapyly in CDsongs)
+            foreach (CD NAME in CDsongs)
             {
-                Console.WriteLine(kakapyly);
+                Console.WriteLine(NAME);
             }
 
 
