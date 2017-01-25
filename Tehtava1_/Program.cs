@@ -31,7 +31,7 @@ namespace JAMK.IT
             }
             //TODO kysy käyttäjältä hetu ja haetaan sitä vastaava henkilö näytölle
 
-            Console.WriteLine("Hae hlo ");
+            Console.Write("Hae hlo ");
             Console.WriteLine("asd" + poppoo.HaeHenkiloHetulla(Console.ReadLine()));
 
         }
