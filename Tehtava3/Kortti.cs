@@ -6,20 +6,13 @@ using System.Threading.Tasks;
 
 namespace JAMK.IT
 {
-    class Kortti
+    public class Kortti
     {
-        public int Value { get; set; }
-        public string Nimi { get; set; }
-
-        public Kortti (string nimi, int value)
+        public int KortinNumero { get; set; }
+        public string Maa { get; set; }
+        public override string ToString()
         {
-            Nimi = nimi;
-            Value = value;
-        }
-
-        public string PrintCard()
-        {
-            return Nimi + " " + Value;
+            return Maa + " " + KortinNumero;
         }
     }
 }

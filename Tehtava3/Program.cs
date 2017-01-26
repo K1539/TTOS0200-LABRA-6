@@ -17,15 +17,28 @@ namespace JAMK.IT
     {
         static void Main(string[] args)
         {
-            int[] KorttiPakka = new int[52];
-
-            for (int i = 0; i < KorttiPakka.Length; i++)
+            TestaaHenkiloRekisteri();
+        }
+        static void TestaaHenkiloRekisteri()
+        {
+            //luodaan muutaman testi henkilö
+            Korttipakka poppoo = new Korttipakka();
+            Kortti hlo0 = new Kortti { KortinNumero = 1 };
+            Kortti hlo1 = new Kortti { KortinNumero = 1 };
+            Kortti hlo2 = new Kortti { KortinNumero = 1 };
+            //Lisätään henkilöt poppooseen
+            poppoo.LisaaHenkilo(hlo);
+            poppoo.LisaaHenkilo(hlo1);
+            poppoo.LisaaHenkilo(hlo2);
+            //tulostetaan poppoo näytölle
+            foreach (Kortti h in poppoo.Henkilolista)
             {
-                KorttiPakka[i] = (i + 1);
-                Console.WriteLine(KorttiPakka[i]);
+                Console.WriteLine("{0}", h.ToString());
             }
+            //TODO kysy käyttäjältä hetu ja haetaan sitä vastaava henkilö näytölle
 
-            
+            Console.Write("Hae hlo ");
+            Console.WriteLine(poppoo.HaeHenkiloHetulla(Console.ReadLine()));
 
         }
     }
