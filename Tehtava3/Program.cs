@@ -23,22 +23,19 @@ namespace JAMK.IT
         {
             //luodaan muutaman testi henkilö
             Korttipakka poppoo = new Korttipakka();
-            Kortti hlo0 = new Kortti { KortinNumero = 1 };
-            Kortti hlo1 = new Kortti { KortinNumero = 1 };
-            Kortti hlo2 = new Kortti { KortinNumero = 1 };
+            Kortti hlo0 = new Kortti { KortinNumero = 1, Maa = "Hertta" };
+            Kortti hlo1 = new Kortti { KortinNumero = 1, Maa = "Pata" };
+            Kortti hlo2 = new Kortti { KortinNumero = 1, Maa = "Risti" };
             //Lisätään henkilöt poppooseen
-            poppoo.LisaaHenkilo(hlo);
+            poppoo.LisaaHenkilo(hlo0);
             poppoo.LisaaHenkilo(hlo1);
             poppoo.LisaaHenkilo(hlo2);
             //tulostetaan poppoo näytölle
             foreach (Kortti h in poppoo.Henkilolista)
             {
-                Console.WriteLine("{0}", h.ToString());
+                Console.WriteLine(h.ToString());
             }
-            //TODO kysy käyttäjältä hetu ja haetaan sitä vastaava henkilö näytölle
 
-            Console.Write("Hae hlo ");
-            Console.WriteLine(poppoo.HaeHenkiloHetulla(Console.ReadLine()));
 
         }
     }
