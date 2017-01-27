@@ -8,7 +8,7 @@ namespace JAMK.IT
 {
     public class Kortti
     {
-        public int KortinNumero { get; set; }
+        public string KortinNumero { get; set; }
         public string Maa { get; set; }
         public override string ToString()
         {

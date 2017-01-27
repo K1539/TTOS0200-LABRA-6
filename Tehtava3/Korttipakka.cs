@@ -9,7 +9,7 @@ namespace JAMK.IT
     class Korttipakka
     {
         //properties
-        private List<Kortti> henkilot;
+        public List<Kortti> henkilot;
         public List<Kortti> Henkilolista
         {
             get { return henkilot; }
