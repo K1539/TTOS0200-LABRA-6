@@ -17,13 +17,14 @@ namespace JAMK.IT
     {
         static void Main(string[] args)
         {
-            LisaaPataKortit();
+            LisaaKortit();
         }
-        public static void LisaaPataKortit()
+        public static void LisaaKortit()
         {
+            int i = 0;
             //pata
             Korttipakka poppoo = new Korttipakka();
-            Kortti pata1 = new Kortti { KortinNumero = "1", Maa = "Pata" };
+            Kortti pata1 = new Kortti { KortinNumero = "ässä", Maa = "Pata" };
             Kortti pata2 = new Kortti { KortinNumero = "2", Maa = "Pata" };
             Kortti pata3 = new Kortti { KortinNumero = "3", Maa = "Pata" };
             Kortti pata4 = new Kortti { KortinNumero = "4", Maa = "Pata" };
@@ -37,7 +38,7 @@ namespace JAMK.IT
             Kortti pataakka = new Kortti { KortinNumero = "akka", Maa = "Pata" };
             Kortti patakurko = new Kortti { KortinNumero = "kurko", Maa = "Pata" };
             //hertta
-            Kortti hertta1 = new Kortti { KortinNumero = "1", Maa = "hertta" };
+            Kortti hertta1 = new Kortti { KortinNumero = "ässä", Maa = "hertta" };
             Kortti hertta2 = new Kortti { KortinNumero = "2", Maa = "hertta" };
             Kortti hertta3 = new Kortti { KortinNumero = "3", Maa = "hertta" };
             Kortti hertta4 = new Kortti { KortinNumero = "4", Maa = "hertta" };
@@ -51,7 +52,7 @@ namespace JAMK.IT
             Kortti herttaakka = new Kortti { KortinNumero = "akka", Maa = "hertta" };
             Kortti herttakurko = new Kortti { KortinNumero = "kurko", Maa = "hertta" };
             //risti
-            Kortti risti1 = new Kortti { KortinNumero = "1", Maa = "risti" };
+            Kortti risti1 = new Kortti { KortinNumero = "ässä", Maa = "risti" };
             Kortti risti2 = new Kortti { KortinNumero = "2", Maa = "risti" };
             Kortti risti3 = new Kortti { KortinNumero = "3", Maa = "risti" };
             Kortti risti4 = new Kortti { KortinNumero = "4", Maa = "risti" };
@@ -65,7 +66,7 @@ namespace JAMK.IT
             Kortti ristiakka = new Kortti { KortinNumero = "akka", Maa = "risti" };
             Kortti ristikurko = new Kortti { KortinNumero = "kurko", Maa = "risti" };
             //ruutu
-            Kortti ruutu1 = new Kortti { KortinNumero = "1", Maa = "ruutu" };
+            Kortti ruutu1 = new Kortti { KortinNumero = "ässä", Maa = "ruutu" };
             Kortti ruutu2 = new Kortti { KortinNumero = "2", Maa = "ruutu" };
             Kortti ruutu3 = new Kortti { KortinNumero = "3", Maa = "ruutu" };
             Kortti ruutu4 = new Kortti { KortinNumero = "4", Maa = "ruutu" };
@@ -134,10 +135,34 @@ namespace JAMK.IT
             poppoo.LisaaHenkilo(ruutujatka);
             poppoo.LisaaHenkilo(ruutuakka);
             poppoo.LisaaHenkilo(ruutukurko);
+            //
             foreach (Kortti h in poppoo.Henkilolista)
             {
                 Console.WriteLine(h.ToString());
             }
+            Console.WriteLine();
+            Console.Write("Arvotaanko kortit uuteen järjestykseen? (yes / no) > ");
+            string vastaus = Console.ReadLine();
+            if (vastaus == "yes")
+            {
+                Console.Clear();
+                while (i < poppoo.Henkilolista.Count)
+                {
+                    int n = poppoo.Henkilolista.Count;
+                    Random rnd = new Random();
+                    while (n > i)
+                    {
+                        int k = rnd.Next(0, n);
+                        n--;
+                        Kortti value = poppoo.Henkilolista[k];
+                        poppoo.Henkilolista[k] = poppoo.Henkilolista[n];
+                        poppoo.Henkilolista[n] = value;
+                    }
+                    Console.WriteLine(poppoo.Henkilolista[n]);
+                    i++;
+                }
+            }
+
         }
 
      }
