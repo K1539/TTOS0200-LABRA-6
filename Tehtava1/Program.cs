@@ -31,7 +31,7 @@ namespace JAMK.IT
             CD S7 = new CD("I Got The Message                   3:27");
             CD S8 = new CD("Velcro Fly                          3:29");
             CD S9 = new CD("Dipping Low (In The Lap Of Luxury)  3:11");
-            CD S10 = new CD("Delirious  3:41");
+            CD S10 = new CD("Delirious                           3:41");
 
             List<CD> CDsongs = new List<IT.CD>();
             CDsongs.Add(S1);
